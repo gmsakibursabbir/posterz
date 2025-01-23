@@ -22,7 +22,7 @@
   </head>
   <body>
     <!-- header start -->
-    <header id="headerFlow">
+    <header id="headerFlow" class="shadow-sm">
       <div class="container-fluid">
         <div class="row header-flow-row align-items-center">
           <div class="col">
@@ -95,7 +95,7 @@
                   <div
                     class="progress-bar"
                     role="progressbar"
-                    style="width: 100%"
+                    style="width: 50%"
                     aria-valuenow="100"
                     aria-valuemin="0"
                     aria-valuemax="100"
@@ -110,19 +110,131 @@
     <!-- header end -->
     <!-- main start -->
     <main>
-      <form action="" class="demofrom">
-        <div class="input-group mb-3">
-          <span class="input-group-icon"><img src="./img/simple-line-icons_calender.svg" alt=""></span>
-          <span class="divider-input"></span>
-          <input
-            type="text"
-            class="form-control"
-            placeholder="Username"
-            aria-label="Username"
-            aria-describedby="basic-addon1"
-          />
+      <!-- communities start -->
+      <section class="flow" id="communities">
+        <div class="flow-container">
+          <div class="flow-communities">
+            <div class="row flow-row">
+              <div class="col-12">
+                <h2 class="flow-title">Select Communities</h2>
+              </div>
+              <div class="col-12">
+                <div class="row">
+                  <div class="col-4">
+                    <button class="flow-select-button flow-active-btn">
+                      My Community
+                    </button>
+                  </div>
+                  <div class="col-4">
+                    <button class="flow-select-button">All Communities</button>
+                  </div>
+                  <div class="col-4">
+                    <button class="flow-select-button">
+                      Choose Communities
+                    </button>
+                  </div>
+                </div>
+              </div>
+              <div class="col-12">
+                <form class="demofrom">
+                  <div class="input-group flow-input">
+                    <label class="input-group-icon"
+                      ><img src="./img/search-line.svg" alt="search"
+                    /></label>
+                    <input
+                      type="search"
+                      class="form-control"
+                      placeholder="Search Member"
+                      aria-label="search"
+                      aria-describedby="basic-addon1"
+                    />
+                  </div>
+                </form>
+              </div>
+              <div class="col-12">
+                <div class="d-flex align-items-center">
+                  <div class="flow-tags">
+                    Community1
+                    <button class="flow-close">
+                      <img src="./img/xmark.svg" alt="" />
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
-      </form>
+      </section>
+      <!-- boots timeline start -->
+      <section class="flow" id="bootsTimeline">
+        <div class="flow-container">
+          <div class="flow-communities">
+            <div class="row flow-row">
+              <div class="col-12">
+                <h2 class="flow-title">Boost Timeline</h2>
+              </div>
+              <div class="col-12">
+                <form class="demofrom">
+                  <div class="row">
+                    <div class="col-4"></div>
+                    <div class="col-8">
+                      <div class="input-group boots-input mb-3">
+                        <label class="input-group-icon"
+                          ><img
+                            src="./img/simple-line-icons_calender.svg"
+                            alt="icons_calender"
+                        /></label>
+                        <div class="divider-input"></div>
+                        <input
+                          type="date"
+                          class="form-control"
+                          placeholder="Start Date"
+                          aria-label="date"
+                          id="datepicker"
+                          onfocus="this.showPicker()"
+                          aria-describedby="basic-addon1"
+                        />
+                      </div>
+                    </div>
+                    <div class="col-4"></div>
+                    <div class="col-8">
+                      <select
+                        class="form-select boots-select mb-3"
+                        aria-label="Default select example"
+                        id="bootSelect"
+                      >
+                        <option selected hidden>Days</option>
+                        <option value="1">One</option>
+                        <option value="2">Two</option>
+                        <option value="3">Three</option>
+                      </select>
+                    </div>
+                    <div class="col-4"></div>
+                    <div class="col-8">
+                      <div class="input-group boots-input mb-3">
+                        <label class="input-group-icon"
+                          ><img
+                            src="./img/system-uicons_hash.svg"
+                            alt="uicons_hash"
+                        /></label>
+                        <div class="divider-input"></div>
+                        <input
+                          type="number"
+                          min="1"
+                          class="form-control"
+                          placeholder="Enter how many days"
+                          aria-label="days"
+                          aria-describedby="basic-addon1"
+                        />
+                      </div>
+                    </div>
+                  </div>
+                </form>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
     </main>
     <!-- main end -->
     <!-- javascript -->

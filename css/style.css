@@ -42,7 +42,6 @@ body {
 .progress-wrapper {
   width: 100%;
   min-width: 612px;
-  border: 1px solid red;
   position: relative;
 }
 .step-circle {
@@ -96,17 +95,86 @@ body {
 }
 .progress {
   position: absolute;
-  width: 375px;
+  width: 100%;
+  max-width: 488px;
   height: 10px;
   top: 25%;
+  left: 15%;
+  background: #f1f5f9;
+  box-shadow: 4px 4px 6px 0px rgba(215, 228, 240, 0.8) inset,
+    -4px -4px 6px 0px rgba(255, 255, 255, 0.8) inset;
 }
 .progress-bar {
   background: rgb(74, 23, 203);
 }
-
+/* main */
+.flow {
+  width: 100%;
+  height: auto;
+  background: #e3ebf4;
+}
+.flow-container {
+  width: 100%;
+  max-width: 1264px;
+  margin: 0 auto;
+  border-radius: 10px;
+  box-shadow: -6px -6px 12px 0px rgb(255, 255, 255),
+    6px 6px 12px 0px rgba(212, 224, 235, 0.8);
+  background: rgb(241, 245, 249);
+}
+.flow-communities {
+  width: 100%;
+  max-width: 782px;
+  margin: 0 auto;
+  padding: 50px 0;
+}
+#communities {
+  padding: 80px 0 30px 0;
+}
+.flow-row {
+  gap: 30px;
+}
+.flow-title {
+  color: rgb(0, 0, 0);
+  font-family: Montserrat;
+  font-size: 24px;
+  font-weight: 700;
+  line-height: 29px;
+  letter-spacing: 0.07px;
+  text-align: left;
+}
+.flow-select-button {
+  width: 240px;
+  height: 102px;
+  border: none;
+  outline: none;
+  border-radius: 10px;
+  color: rgb(0, 0, 0);
+  font-family: Montserrat;
+  font-size: 18px;
+  font-weight: 500;
+  line-height: 22px;
+  letter-spacing: 0.35px;
+  text-align: center;
+  box-shadow: -6px -6px 12px 0px rgb(255, 255, 255),
+    6px 6px 12px 0px rgba(212, 224, 235, 0.8);
+  background: rgb(241, 245, 249);
+}
+.flow-active-btn {
+  color: rgb(255, 255, 255);
+  font-family: Montserrat;
+  font-size: 18px;
+  font-weight: 700;
+  line-height: 22px;
+  letter-spacing: 0.35px;
+  text-align: center;
+  color: rgb(255, 255, 255);
+  box-shadow: -6px -6px 12px 0px rgb(255, 255, 255),
+    6px 6px 12px 0px rgba(212, 224, 235, 0.8);
+  background: rgb(73, 22, 203);
+}
 .demofrom {
-  padding-top: 100px;
-  max-width: 700px;
+  width: 100%;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -114,7 +182,7 @@ body {
   gap: 20px;
 }
 .input-group {
-  width: 600px;
+  width: 100%;
   height: 56px;
   border-radius: 10px;
   box-shadow: inset -4px -4px 6px 0px rgba(255, 255, 255, 0.8),
@@ -126,31 +194,164 @@ body {
   padding: 17px 25px;
 }
 .divider-input {
-  height: 70%;
   width: 1px;
+  height: 33.6px;
   background-color: #c0d8f0;
 }
-.input-group input {
+.flow-input input {
   width: 100%;
   height: 50px;
   border: none;
   outline: none;
   background: transparent;
   border-radius: 10px;
-  padding: 22px 20px;
+  padding: 20px 25px 20px 5px;
 }
-.input-group input:focus {
+.flow-input input:focus {
   background: transparent;
   border: none;
   outline: none;
   box-shadow: none;
 }
-.input-group input::placeholder {
-  color: rgb(90, 90, 90);
-  font-size: 14px;
+.flow-input input::placeholder {
+  color: #747474;
+  font-family: Montserrat;
+  font-size: 16px;
+  font-style: normal;
   font-weight: 400;
-  line-height: 28px;
+  line-height: 28px; /* 175% */
   letter-spacing: 0.35px;
-  text-align: left;
+}
+.flow-tags {
+  width: 146.88px;
+  height: 42.84px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 10px;
+  background: #f1f5f9;
+  box-shadow: 6px 6px 12px 0px rgba(212, 224, 235, 0.8), -6px -6px 12px 0px #fff;
+  color: #222;
+  font-family: Montserrat;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 150%;
+  position: relative;
+}
+.flow-close {
+  width: 22.032px;
+  height: 22.032px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: rgba(73, 22, 203, 0.2);
+  position: absolute;
+  border-radius: 50%;
+  top: -8px;
+  right: -8px;
+  border: none;
+  outline: none;
+}
+#bootsTimeline {
+  padding-bottom: 30px;
+}
+.boots-input input {
+  width: 100%;
+  height: 50px;
+  border: none;
+  outline: none;
+  background: transparent;
+  border-radius: 10px;
+  padding: 20px 22px 20px 22px;
+}
+
+.boots-input input:focus {
+  background: transparent;
+  border: none;
+  outline: none;
+  box-shadow: none;
+}
+.boots-input input::placeholder {
+  color: #5a5a5a;
+  font-family: Montserrat;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 28px; /* 200% */
+  letter-spacing: 0.35px;
+}
+.boots-select {
+  display: inline-flex;
+  padding: 18px 20px;
+  justify-content: center;
+  align-items: center;
+  gap: 495px;
+  border-radius: 10px;
+  background: #f1f5f9;
+  box-shadow: 6px 6px 12px 0px rgba(212, 224, 235, 0.8), -6px -6px 12px 0px #fff;
+  border: none;
+  color: #000;
+  font-family: Montserrat;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: normal;
+  letter-spacing: 0.07px;
+}
+.boots-select:focus {
+  outline: none;
+  border: none;
+  box-shadow: 6px 6px 12px 0px rgba(212, 224, 235, 0.8), -6px -6px 12px 0px #fff;
+}
+.boots-input input[type="date"]::-webkit-inner-spin-button,
+.boots-input input[type="date"]::-webkit-calendar-picker-indicator {
+  display: none;
+  -webkit-appearance: none;
+}
+.boots-input input[type="date"]::before {
+  content: attr(placeholder);
+  width: 100%;
+  color: #5a5a5a;
+  background: #f1f5f9;
+  font-family: Montserrat;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 28px; /* 200% */
+  letter-spacing: 0.35px;
+  position: absolute;
+  left: 22px;
+}
+.boots-input input[type="date"]:not(:placeholder-shown){
+  color: #5a5a5a;
+  font-family: Montserrat;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 28px; /* 200% */
+  letter-spacing: 0.35px;
+}
+select.boots-select {
+    appearance: none;
+    -webkit-appearance: none; 
+    -moz-appearance: none; 
+    background-image: url('../img/gridicons_dropdown.svg'); 
+    background-repeat: no-repeat;
+  background-position: right 20px center; 
+    background-size: 20px;
+    padding-right: 35px; 
+    cursor: pointer;
+}
+/* For Chrome, Safari, Edge, and Opera */
+.boots-input input[type="number"]::-webkit-inner-spin-button,
+.boots-input input[type="number"]::-webkit-outer-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+/* For Firefox */
+.boots-input input[type="number"] {
+    -moz-appearance: textfield;
 }
 /* === Boost Post Flow 1 (End) === */
