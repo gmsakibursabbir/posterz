@@ -20,7 +20,41 @@ document.addEventListener("DOMContentLoaded", function () {
     }
   });
 });
-//Select option removel
-document.getElementById("bootSelect").addEventListener("focus", function () {
-  this.querySelector("option[selected]").hidden = true;
-});
+// upload area
+  const uploadArea = document.getElementById("uploadArea");
+  const fileInput = document.getElementById("fileInput");
+  const fileNameDisplay = document.getElementById("file-name");
+
+  uploadArea.addEventListener("click", () => {
+    fileInput.click();
+  });
+
+  fileInput.addEventListener("change", (event) => {
+    showFileName(event.target.files);
+  });
+
+  uploadArea.addEventListener("dragover", (event) => {
+    event.preventDefault();
+    uploadArea.classList.add("active");
+  });
+
+  uploadArea.addEventListener("dragleave", () => {
+    uploadArea.classList.remove("active");
+  });
+
+  uploadArea.addEventListener("drop", (event) => {
+    event.preventDefault();
+    uploadArea.classList.remove("active");
+
+    let files = event.dataTransfer.files;
+    fileInput.files = files; // Assign files to input
+    showFileName(files);
+  });
+
+  function showFileName(files) {
+    if (files.length > 0) {
+      fileNameDisplay.textContent = `Selected: ${files[0].name}`;
+    } else {
+      fileNameDisplay.textContent = "";
+    }
+  }
