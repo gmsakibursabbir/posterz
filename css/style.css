@@ -1083,7 +1083,29 @@ select.boots-select {
   top: -2px; /* Place below the tag */
   right: -8px;
 }
-
+.sales-dots {
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 4px;
+  width: 31px;
+  height: auto;
+  bottom: 10px;
+  left: 50%;
+}
+.dots-item {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background-color: #e1e7ff;
+}
+.dots-item-active {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background-color: #F27021;
+}
 .sales-tags span {
   display: flex;
   justify-content: center;
@@ -1233,6 +1255,7 @@ select.boots-select {
   border: none;
   outline: none;
 }
+
 /* === ads type 1 (End) === */
 
 /* === media query === */
